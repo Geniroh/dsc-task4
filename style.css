@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    transition: all ease 300ms;
+    overflow-x: hidden;
+}
+
+:root{
+    --color-blue: #0891F8;
+    --color-black: #384146;
+    --color-white: #FFF;
+    --color-orange: #FA931C;
+    --color-yellow: #ffc83d;
+    --color-warning: #f4f422;
+    --color-danger: #ff2525;
+    --color-red: #ff5757;
+    --color-brown: #ff7350;
+    --color-success: rgb(4, 163, 4);
+    --color-dark: #000;
+
+    --fs-largest: 3.2rem;
+    --fs-larger: 2.8rem;
+    --fs-large: 2.4rem;
+    --fs-normal: 0.9rem;
+    --fs-middle: 2rem;
+    --fs-small: 1.6rem;
+    --fs-smaller: 1rem;
+}
+
+input, textarea, select{
+    font: inherit;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+input:focus, textarea:focus{
+    outline: 0;
+}
+label{
+    display: block;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    letter-spacing: 0.8px;
+    line-height: 1.8rem;
+    color: rgb(103, 103, 103);
+}
+
+hr{
+    width: 100%;
+    color: #f3f3f3;
+    height: 0.7px;
+    margin: 5px 0;
+}
+
+section{
+    padding: 6rem 2rem;
+    margin: 4rem 0;
+    
+}
+
+/*HEADER SECTION*/
+header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    padding: 0 5rem;
+    color: var(--color-black);
+    width: 100%;
+    background-color: var(--color-black);
+}
+
+header .logo{
+    color: var(--color-white);
+}
+
+header nav ul{
+    display: flex;
+    height: 100%;
+    gap: 2rem;
+}
+
+header nav ul li a{
+    color: var(--color-orange);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+header nav ul li a:hover{
+    color: var(--color-white);
+}
+
+
+/*MAIN SECTION*/
+
+
+
+/*CUSTOM STYLES*/
+
+.gl-text-primary{
+    color: var(--color-orange);
+}
+
+.gl-mb{
+    margin-bottom: 2rem;
+}
+
+.gl-container{
+    width: 80%;
+    margin: auto;
+}
+
+.gl-btn{
+    padding: 0.9rem 1.1rem;
+    border: 0;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all ease 300ms;
+}
+
+.gl-btn-primary{
+    background: var(--color-orange);
+    color: var(--color-dark);
+    font-weight: 500;
+}
+.gl-btn-primary:hover{
+    background: var(--color-dark);
+    color: var(--color-white);
+}
+
+.gl-bg-dark{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.gl-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: auto;
+}
+
+.gl-space-2{
+    grid-column: 2 / 4;
+}
+
+.gl-grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.gl-y-center{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/***HERO SECTION****/
+.gl-hero h1{
+    font-size: var(--fs-largest);
+}
+
+.gl-hero-image{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.gl-text-str{
+    font-size: 2rem;
+    line-height: 2rem;
+    position: relative;
+    margin-left: 40px;
+    padding-left: 20px;
+}
+.gl-text-str::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background: var(--color-orange);
+    top: 50%;
+    left: -43px;
+    display: block;
+}
+
+/**TEAM SECTION**/
+.gl-user .gl-user-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+.gl-user .gl-user-form > div:first-child{
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--color-black);
+    height: 100%;
+    padding-inline: 2rem;
+    width: 40%;
+    font-size: 1rem;
+}
+.gl-user .gl-user-form > div:first-child input{
+   border: 0;
+   padding: 1rem ;
+}
+
+.gl-user .gl-user-form > div:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 100%;
+    width: 60%;
+}
+
+.gl-user .gl-user-form > div:last-child a{
+   color: var(--color-black);
+   height: 100%;
+   display: flex;
+   padding: 0 1rem;
+   align-items: center;
+   justify-content: center;
+   transition: all ease 300ms;
+   border-radius: 4px;
+}
+.gl-user .gl-user-form > div:last-child a:hover{
+   color: var(--color-white);
+   background: var(--color-orange);
+}
+.gl-user .gl-user-form > div:last-child a.active{
+   color: var(--color-white);
+   background: var(--color-orange);
+}
+
+.gl-user-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.gl-user-card .gl-card{
+    display: flex;
+    gap: 2rem;
+    height: 15rem;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    background: #e3dede;
+    transition: all ease 300ms;
+}
+
+.gl-user-card .gl-card:hover{
+   box-shadow: 0 10px 10px #e6e6e6;
+}
+
+.gl-user-card .gl-card .gl-card-info h1{
+    color: var(--color-dark);
+    font-size: 1.1rem;
+}
+.gl-user-card .gl-card .gl-card-info h2{
+    color: var(--color-black);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.gl-user-card .gl-card .gl-card-info span{
+    color: var(--color-white);
+    font-size: 0.7rem;
+    background: var(--color-orange);
+    padding: 0.4rem;
+    border-radius: 0.6rem;
+}
+
+.gl-user-card .gl-card .gl-card-img{
+   flex-basis: 35%;
+   display: flex;
+   height: 100%;
+   align-items: flex-start;
+   justify-content: start;
+   border-radius: 50%;
+}
+.gl-user-card .gl-card .gl-card-img img{
+   border-radius: 50%;
+   height: 5rem;
+   width: 5rem;
+}
+
+.gl-testimonial{
+    width: 100%;
+    background-image: url('./images/test\ -\ Copy.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-bottom: 10rem;
+}
+
+.gl-testimonial .gl-testimonial-info{
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.gl-testimonial .gl-testimonial-info p{
+   color: var(--color-white);
+   font-style: italic;
+}
+
+.gl-testimonial .gl-testimonial-image img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    /* object-fit: contain; */
+}
+.gl-testimonial .gl-testimonial-image {
+   display: flex;
+   justify-content: center;
+}
+
+.gl-contact{
+    display: flex;
+    width: 90%;
+    margin-inline: auto;
+    flex-direction: column;
+
+}
+
+.gl-contact .gl-form-group{
+    width: 90%;
+    margin-inline: auto;
+}
+
+.gl-contact .gl-form-group input{
+    width: 100%;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 2rem;
+
+}
+
+.gl-contact .gl-form-group textarea{
+    width: 100%;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 2rem;
+    min-height: 6rem;
+}
+
+footer .gl-grid{
+    display: grid;
+    grid-template-columns: repeat(3 , minmax(150px,1fr));
+    margin: auto;
+}
+
+footer .gl-footer-card{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: var(--color-white);
+}
+footer .gl-footer-card ul li{
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+footer .gl-footer-card ul li i{
+  margin-right: 0.3rem;
+}
+footer .gl-footer-card p{
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+footer .gl-footer-card .heading{
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .gl-hero h1{
+        font-size: var(--fs-middle);
+    }
+    .gl-grid-2{
+        grid-template-columns: 1fr;
+    }
+    header{
+        padding: 0 2rem;
+    }
+    #hero > div{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    .gl-text-str{
+        font-size: var(--fs-small);
+    }
+
+    .gl-user .gl-user-form > div:first-child input{
+        border: 0;
+        padding: 0.4rem  1rem;
+    }
+    /* .gl-user .gl-user-form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+        width: 100%;
+    } */
+
+    .gl-user .gl-user-form {
+        height: auto;
+    }
+    .gl-user .gl-user-form > div:first-child{
+        height: 2.8rem;
+        padding-inline: 1.4rem;
+        width: 100%;
+    }
+    .gl-user .gl-user-form > div:last-child{
+        margin: 1rem auto;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .gl-user .gl-user-form > div:last-child a{
+        height: 2.8rem;
+    }
+
+    .gl-user-card{
+        grid-template-columns: 1fr;
+    }
+
+    .gl-testimonial{
+        background-size: cover;
+    }
+    
+    .gl-testimonial .gl-testimonial-info{
+        width: 80%;
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+
+    footer .gl-footer-card p{
+        color: var(--color-white);
+        margin-bottom: 0.4rem;
+        width: 100%;
+        padding: 1rem;
+        font-size: var(--fs-normal);
+    }
+    
+    footer .gl-footer-card .heading{
+        font-size: 1.2rem;
+    }
+
+    footer .gl-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
